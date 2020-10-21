@@ -1,0 +1,47 @@
+h1 {
+    border: 0px #eee solid;
+    color:black; 
+    font-size: xx-large;  
+    text-align: center;
+    padding: 30px;
+    
+}
+
+h2{
+    color: blue; 
+    font-size: medium;  
+    text-align: center;
+    box-align:right;
+    padding: 30px;
+}
+
+.jumbotron h1{
+    color: #fff;
+    text-align:right;
+}
+
+.background-image{
+padding-top:8in;
+padding-left:5in;
+padding-right: 5in;
+}
+
+h3 {
+    border: 2px;
+    color: red;
+    box-align:left;
+    padding: 2px;
+}
+
+img{
+    border: 2px #eee solid;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left:5px;
+    box-align: center;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}

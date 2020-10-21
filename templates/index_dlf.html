@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Some Common HTML Tags</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <!--Embedded Styles (*{} is a reset rule!-->
+  <style type="text/css">
+    *{
+      margin: 0px;
+      padding: 0px;
+      color: black;
+      font-size: medium;      
+    }
+  
+    Container for background image
+    body, #container1{
+      background-color:rgb(161, 160, 158);
+      font-family: veranda;
+      color: #009;
+      position: relative;
+    }
+      #container1{
+        width: 2000px;
+        margin: 0px auto;
+    }
+      #container2{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          font-size:x-larger;          
+    }
+    .responsive {
+      max-width: 100%;
+      height: auto;
+    }
+    
+  </style>  
+</head>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <style>
+            .jumbotron {
+               background-image: url("../static/images/Baseballindirt.png");
+            }
+         </style>
+        <h1>Farm To Franchise</h1>
+       </div>
+    </div>
+
+    <div id = "container1"class="responsive">
+      <div class= "row"> 
+        <div class= "col-md-12">
+          <style>
+            body {
+            background-image: url("../static/images/GreyBaseballDiamond150.jpg");
+          }
+          </style> 
+        </div> 
+      </div>
+        <div id="container2"class="responsive">
+        <!--All of the content for dropdown selector, chart of user choice data-->
+        <h1>Farm To Franchise Analysis Tool</h1>
+        <p>This tool is designed to help you make profitable decisions. By analyzing each player's 
+          statistical data and comparing it to historical outcomes<br> your choice of when, or whether,
+          to bring a player up from a farm team and when it is time to part ways can be data 
+          driven. The data can help <br>you determine when you can expect that player to peak, and when the player's stats indicate their decline has begun. <br>
+          
+          <br>Select from the options below to explore players' stats from 2000-2019 and see when players are in their prime!</p>
+          <br><hr>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="well">
+              <p>Which stats would you like to see first?</p>
+              <select id="selOption">
+                <option value="batters">batters</option>
+                <option value="pitchers">pitchers</option>
+              </select>
+            </div>
+          </div>
+            <div class="col-md-6">
+              <div class="well">
+                <p>Choose a player to evaluate.</p>
+                <select id="selPlayer" onchange="optionChanged(this.value)"></select>
+              </div>
+            </div>
+        </div>
+        <div class="row">    
+          <div class="col-md-6">
+            <div id="graph1"></div>            
+          </div>
+
+          <div class="col-md-6">
+            <div id="graph2"></div>
+          </div>
+        <div class="row">    
+          <div class="col-md-6">
+            <div id="graph3"></div>
+          </div>
+          <div class="col-md-6">
+            <div id="graph4"></div>
+          </div>
+        </div>
+      </div>    
+        </div> <!-- End container2-->
+    </div> <!--End container1-->
+ 
+    
+<script src="https://d3js.org/d3.v5.min.js"></script>  
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/logic.js') }}"></script>
+
+</body>
+</html>
